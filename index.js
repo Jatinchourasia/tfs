@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
 const Insta = require("instamojo-nodejs");
-
+require("dotenv").config();
 const bodyParser = require("body-parser");
 
-const API_KEY = "test_6bfbfd9542c0073aaf8d4c52611";
+const API_KEY = process.env.API;
 
-const AUTH_KEY = "test_f0f9775ad0bdb5ee0fb563cedb8";
+const AUTH_KEY = process.env.AUTH;
 
 Insta.setKeys(API_KEY, AUTH_KEY);
 
